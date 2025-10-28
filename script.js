@@ -288,7 +288,7 @@ if (langSwitcher) {
         const currentPath = window.location.pathname;
         const currentHash = window.location.hash;
         
-        // DÜZELTME: Dosya adını path'den alıyoruz.
+        // Dosya adını path'den alıyoruz
         const fileName = currentPath.substring(currentPath.lastIndexOf('/') + 1);
         const isEnglish = fileName.endsWith('_eng.html');
         
@@ -302,8 +302,11 @@ if (langSwitcher) {
             newFileName = fileName.replace('.html', '_eng.html');
         }
         
-        // DÜZELTME: Yalnızca dosya adını kullanarak yönlendirme yap, klasör ekleme.
-        window.location.href = newFileName + currentHash;
+        // Tam URL'yi oluştur (path + yeni dosya adı + hash)
+        const pathWithoutFile = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
+        const newUrl = pathWithoutFile + newFileName + currentHash;
+        
+        window.location.href = newUrl;
     };
 
     if (langItem) {
@@ -853,4 +856,5 @@ document.addEventListener('visibilitychange', () => {
         }
     }
 });
+
 
