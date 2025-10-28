@@ -225,7 +225,7 @@ const updateLangSwitcherDisplay = () => {
     const en_button_html = `<svg class="lang-switcher__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 341"><rect width="512" height="341" fill="#012169"/><path fill="#FFF" d="M0 0l512 341M512 0L0 341"/><path fill="#FFF" d="M213 0h86v341h-86z"/><path fill="#FFF" d="M0 114h512v113H0z"/><path fill="#C8102E" d="M0 137h512v68H0z"/><path fill="#C8102E" d="M230 0h52v341h-52z"/><path stroke="#FFF" stroke-width="64" d="M0 0l512 341M512 0L0 341"/><path stroke="#C8102E" stroke-width="43" d="M0 0l512 341M512 0L0 341"/></svg> <span>EN</span> <i class='bx bx-chevron-down lang-switcher__arrow'></i>`;
     const tr_item_html = `<svg class="lang-switcher__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 341"><rect width="512" height="341" fill="#E30A17"/><circle cx="258" cy="170.5" r="102" fill="#fff"/><circle cx="275" cy="170.5" r="85" fill="#E30A17"/><path fill="#fff" d="m320 161-28 18 11-29-28-18h34l11-29 11 29h34l-28 18 11 29z"/></svg> <span>TR</span>`;
 
-    const isEnglish = window.location.pathname.endsWith('_eng.html');
+    const isEnglish = window.location.pathname.includes('_eng');
 
     if (isEnglish) {
         button.innerHTML = en_button_html;
@@ -260,29 +260,31 @@ if (langSwitcher) {
     });
 
     const switchLanguage = () => {
-        const currentPath = window.location.pathname;
-        const currentHash = window.location.hash;
-        
-        let fileName = currentPath.substring(currentPath.lastIndexOf('/') + 1);
+        const path = window.location.pathname;
+        const hash = window.location.hash;
+        const isEnglish = path.includes('_eng');
+        let newPath;
 
-        // YENİ EKLENEN KISIM: Eğer ana sayfadaysak (URL'de dosya adı yoksa),
-        // dosya adını 'index.html' olarak varsay.
-        if (fileName === '') {
-            fileName = 'index.html';
-        }
-        
-        const isEnglish = fileName.endsWith('_eng.html');
-        let newFileName;
-        
         if (isEnglish) {
-            // İngilizceden Türkçeye geçiş
-            newFileName = fileName.replace('_eng.html', '.html');
+            // İNGİLİZCE'DEN TÜRKÇE'YE GEÇİŞ
+            // Örnek: '/applications_eng' -> '/applications'
+            // Örnek: '/index_eng.html' -> '/index.html'
+            newPath = path.replace('_eng', '');
         } else {
-            // Türkçeden İngilizceye geçiş
-            newFileName = fileName.replace('.html', '_eng.html');
+            // TÜRKÇE'DEN İNGİLİZCE'YE GEÇİŞ
+            if (path === '/' || path.endsWith('/index.html')) {
+                // Ana sayfa özel durumu
+                newPath = '/index_eng.html';
+            } else if (path.endsWith('.html')) {
+                // .html ile biten normal sayfalar
+                newPath = path.replace('.html', '_eng.html');
+            } else {
+                // .html olmayan "pretty" URL'ler (örn: /applications)
+                newPath = path + '_eng';
+            }
         }
         
-        window.location.href = newFileName + currentHash;
+        window.location.href = newPath + hash;
     };
 
     if (langItem) {
@@ -832,6 +834,7 @@ document.addEventListener('visibilitychange', () => {
         }
     }
 });
+
 
 
 
