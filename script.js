@@ -225,7 +225,6 @@ const updateLangSwitcherDisplay = () => {
     const en_button_html = `<svg class="lang-switcher__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 341"><rect width="512" height="341" fill="#012169"/><path fill="#FFF" d="M0 0l512 341M512 0L0 341"/><path fill="#FFF" d="M213 0h86v341h-86z"/><path fill="#FFF" d="M0 114h512v113H0z"/><path fill="#C8102E" d="M0 137h512v68H0z"/><path fill="#C8102E" d="M230 0h52v341h-52z"/><path stroke="#FFF" stroke-width="64" d="M0 0l512 341M512 0L0 341"/><path stroke="#C8102E" stroke-width="43" d="M0 0l512 341M512 0L0 341"/></svg> <span>EN</span> <i class='bx bx-chevron-down lang-switcher__arrow'></i>`;
     const tr_item_html = `<svg class="lang-switcher__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 341"><rect width="512" height="341" fill="#E30A17"/><circle cx="258" cy="170.5" r="102" fill="#fff"/><circle cx="275" cy="170.5" r="85" fill="#E30A17"/><path fill="#fff" d="m320 161-28 18 11-29-28-18h34l11-29 11 29h34l-28 18 11 29z"/></svg> <span>TR</span>`;
 
-    // DÜZELTME: URL'deki dosya adının "_eng.html" ile bitip bitmediğini kontrol et
     const isEnglish = window.location.pathname.endsWith('_eng.html');
 
     if (isEnglish) {
@@ -240,73 +239,50 @@ const updateLangSwitcherDisplay = () => {
 // Sayfa yüklendiğinde gösterimi güncelle
 updateLangSwitcherDisplay();
 
-// Bu bölüm, dropdown menüsünün açılıp kapanma işlevselliğini yönetir.
 const langSwitcher = document.querySelector('.footer .lang-switcher');
     
 if (langSwitcher) {
     const button = langSwitcher.querySelector('.lang-switcher__button');
     const langItem = langSwitcher.querySelector('.lang-switcher__item');
 
-    const closeDropdown = () => {
-        langSwitcher.classList.remove('is-open');
-        button.setAttribute('aria-expanded', 'false');
-        document.removeEventListener('click', handleOutsideClick);
-        document.removeEventListener('keydown', handleEscapeKey);
-    };
-
-    const openDropdown = () => {
-        langSwitcher.classList.add('is-open');
-        button.setAttribute('aria-expanded', 'true');
-        document.addEventListener('click', handleOutsideClick);
-        document.addEventListener('keydown', handleEscapeKey);
-    };
-
-    const handleOutsideClick = (event) => {
-        if (!langSwitcher.contains(event.target)) {
-            closeDropdown();
-        }
-    };
-
-    const handleEscapeKey = (event) => {
-        if (event.key === 'Escape') {
-            closeDropdown();
-        }
-    };
+    const closeDropdown = () => { langSwitcher.classList.remove('is-open'); button.setAttribute('aria-expanded', 'false'); document.removeEventListener('click', handleOutsideClick); document.removeEventListener('keydown', handleEscapeKey); };
+    const openDropdown = () => { langSwitcher.classList.add('is-open'); button.setAttribute('aria-expanded', 'true'); document.addEventListener('click', handleOutsideClick); document.addEventListener('keydown', handleEscapeKey); };
+    const handleOutsideClick = (event) => { if (!langSwitcher.contains(event.target)) { closeDropdown(); } };
+    const handleEscapeKey = (event) => { if (event.key === 'Escape') { closeDropdown(); } };
 
     button.addEventListener('click', (event) => {
         event.stopPropagation();
-        const isOpen = langSwitcher.classList.contains('is-open');
-        if (isOpen) {
+        if (langSwitcher.classList.contains('is-open')) {
             closeDropdown();
         } else {
             openDropdown();
         }
     });
 
-    // Bu fonksiyon, diller arasında geçiş yapar.
     const switchLanguage = () => {
         const currentPath = window.location.pathname;
         const currentHash = window.location.hash;
         
-        // Dosya adını path'den alıyoruz
-        const fileName = currentPath.substring(currentPath.lastIndexOf('/') + 1);
-        const isEnglish = fileName.endsWith('_eng.html');
+        let fileName = currentPath.substring(currentPath.lastIndexOf('/') + 1);
+
+        // YENİ EKLENEN KISIM: Eğer ana sayfadaysak (URL'de dosya adı yoksa),
+        // dosya adını 'index.html' olarak varsay.
+        if (fileName === '') {
+            fileName = 'index.html';
+        }
         
+        const isEnglish = fileName.endsWith('_eng.html');
         let newFileName;
         
         if (isEnglish) {
-            // İngilizceden Türkçeye geçiş: "_eng.html" kısmını ".html" ile değiştir.
+            // İngilizceden Türkçeye geçiş
             newFileName = fileName.replace('_eng.html', '.html');
         } else {
-            // Türkçeden İngilizceye geçiş: ".html" kısmını "_eng.html" ile değiştir.
+            // Türkçeden İngilizceye geçiş
             newFileName = fileName.replace('.html', '_eng.html');
         }
         
-        // Tam URL'yi oluştur (path + yeni dosya adı + hash)
-        const pathWithoutFile = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
-        const newUrl = pathWithoutFile + newFileName + currentHash;
-        
-        window.location.href = newUrl;
+        window.location.href = newFileName + currentHash;
     };
 
     if (langItem) {
@@ -856,5 +832,6 @@ document.addEventListener('visibilitychange', () => {
         }
     }
 });
+
 
 
