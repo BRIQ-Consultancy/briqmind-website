@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'boxicons';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* İŞTE BU ÖNEMLİ! */
+  src: url('fonts/boxicons.woff2') format('woff2');
+}
+
+.bx {
+  font-family: 'boxicons' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  display: inline-block;
+  text-transform: none;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Icon sınıfları - örnekler */
+.bx-calculator:before { content: "\ea44"; }
+.bx-data:before { content: "\ea5d"; }
+.bxs-pen:before { content: "\ef11"; }
+.bx-user-voice:before { content: "\ec5f"; }
+.bx-wrench:before { content: "\ec6a"; }
+.bx-recycle:before { content: "\ec0e"; }
+.bx-bar-chart-alt-2:before { content: "\ea35"; }
+.bx-cloud:before { content: "\ea4d"; }
+.bx-first-aid:before { content: "\ea7c"; }
+.bx-game:before { content: "\ea88"; }
+.bx-cart-alt:before { content: "\ea46"; }
+.bxs-shield-alt-2:before { content: "\ef31"; }
+.bxl-bitcoin:before { content: "\ed5b"; }
+.bx-leaf:before { content: "\eac6"; }
+.bxs-city:before { content: "\ee73"; }
+.bx-bot:before { content: "\ea3d"; }
+.bx-group:before { content: "\ea96"; }
+.bx-bullseye:before { content: "\ea43"; }
+.bx-broadcast:before { content: "\ea40"; }
+.bx-camera-movie:before { content: "\ea45"; }
+.bxs-factory:before { content: "\ee98"; }
+.bxs-building-house:before { content: "\ee6a"; }
+.bxs-bank:before { content: "\ee5f"; }
+.bxs-florist:before { content: "\ee9b"; }
+.bx-chevron-left:before { content: "\ea4a"; }
+.bx-chevron-right:before { content: "\ea4b"; }
+.bx-right-arrow-alt:before { content: "\ec12"; }
