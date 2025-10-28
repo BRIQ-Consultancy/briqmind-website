@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRIQ Mind | Applications - Cybersecurity and Risk Management</title>
+
+    <link rel="icon" href="/public/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Discover BRIQ Mind's AI powered cybersecurity and risk management solutions.">
+    <meta name="robots" content="index, follow"> 
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="legal.css">
+    <link rel="stylesheet" href="applications_single.css">
+    
+    <style>
+      /* Important: Fixes the style conflict that prevents horizontal scrolling */
+      html, body {
+        overflow-x: visible !important;
+      }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet"></noscript>
+    
+    <link href='public/boxicons-local.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index_eng.html" class="nav__logo">
+                    <picture>
+                        <source srcset="public/logo.webp" type="image/webp">
+                        <img src="public/logo.png" alt="BRIQ Mind Logo" class="nav__logo-img">
+                    </picture>
+                    <span class="logo-text-wrapper">
+                        <span class="logo-text logo-text--briq">BRIQ</span>
+                        <span class="logo-text logo-text--mind">Mind</span>
+                    </span>
+                </a>
+                
+                <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                </button>
+
+                <div class="nav__menu" id="navMenu">
+                    <ul class="nav__list">
+                        <li class="nav__item dropdown">
+                            <a href="applications_eng.html#applications" class="nav__link">Applications</a>
+                            <div class="dropdown-menu">
+                                <div class="dropdown-container">
+                                    <div class="applications-grid">
+
+                                        <div class="dropdown-category-column">
+                                            <h4 class="dropdown-category-title">Sector Expertise</h4>
+                                            <ul class="dropdown-category-list">
+                                                <li><a href="applications_sektorel_1_eng.html" class="dropdown-item">Finance and Accounting</a></li>
+                                                <li><a href="applications_sektorel_2_eng.html" class="dropdown-item">Manufacturing and Industry 4.0</a></li>
+                                                <li><a href="applications_sektorel_3_eng.html" class="dropdown-item">Commerce and Retail</a></li>
+                                                <li><a href="applications_sektorel_4_eng.html" class="dropdown-item">Education Technologies</a></li>
+                                                <li><a href="applications_sektorel_5_eng.html" class="dropdown-item">Energy and Sustainability</a></li>
+                                                <li><a href="applications_sektorel_6_eng.html" class="dropdown-item">Public Sector and Local Governments</a></li>
+                                                <li><a href="applications_sektorel_7_eng.html" class="dropdown-item">Tourism and Hospitality</a></li>
+                                                <li><a href="applications_sektorel_8_eng.html" class="dropdown-item">Logistics and Transportation</a></li>
+                                                <li><a href="applications_sektorel_9_eng.html" class="dropdown-item">Agriculture and Food Systems</a></li>
+                                                <li><a href="applications_sektorel_10_eng.html" class="dropdown-item">Information Technology (IT)</a></li>
+                                                <li><a href="applications_sektorel_11_eng.html" class="dropdown-item">Nonprofit Organizations</a></li>
+                                                <li><a href="applications_sektorel_12_eng.html" class="dropdown-item">Risk and Insurance Technologies</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="dropdown-category-column">
+                                            <h4 class="dropdown-category-title">Functional Solutions</h4>
+                                            <ul class="dropdown-category-list">
+                                                <li><a href="applications_fonksiyonel_1_eng.html" class="dropdown-item">Customer Relationship Management (CRM)</a></li>
+                                                <li><a href="applications_fonksiyonel_2_eng.html" class="dropdown-item">Data Analytics and Visualization</a></li>
+                                                <li><a href="applications_fonksiyonel_3_eng.html" class="dropdown-item">Operational Process Automation</a></li>
+                                                <li><a href="applications_fonksiyonel_4_eng.html" class="dropdown-item">Knowledge Systems</a></li>
+                                                <li><a href="applications_fonksiyonel_5_eng.html" class="dropdown-item">Digital Marketing Automation</a></li>
+                                                <li><a href="applications_fonksiyonel_6_eng.html" class="dropdown-item">Subscription and Revenue Management</a></li>
+                                                <li><a href="applications_fonksiyonel_7_eng.html" class="dropdown-item">E Commerce and Digital Sales Management</a></li>
+                                                <li><a href="applications_fonksiyonel_8_eng.html" class="dropdown-item">Human Resources Automation</a></li>
+                                                <li><a href="applications_fonksiyonel_9_eng.html" class="dropdown-item">Cybersecurity and Risk Management</a></li>
+                                                <li><a href="applications_fonksiyonel_10_eng.html" class="dropdown-item">Supply Chain Optimization</a></li>
+                                                <li><a href="applications_fonksiyonel_11_eng.html" class="dropdown-item">Enterprise Decision Support Systems</a></li>
+                                                <li><a href="applications_fonksiyonel_12_eng.html" class="dropdown-item">Intelligent Sales and Customer Assistants</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="dropdown-category-column">
+                                            <h4 class="dropdown-category-title">Technology and Platforms</h4>
+                                            <ul class="dropdown-category-list">
+                                                <li><a href="applications_teknoloji_1_eng.html" class="dropdown-item">Multimodal Artificial Intelligence</a></li>
+                                                <li><a href="applications_teknoloji_2_eng.html" class="dropdown-item">RAG and Vector Databases</a></li>
+                                                <li><a href="applications_teknoloji_3_eng.html" class="dropdown-item">Agentic Systems and Tools</a></li>
+                                                <li><a href="applications_teknoloji_4_eng.html" class="dropdown-item">Customized LLM Training</a></li>
+                                                <li><a href="applications_teknoloji_5_eng.html" class="dropdown-item">Data Architecture and Analytics Platforms</a></li>
+                                                <li><a href="applications_teknoloji_6_eng.html" class="dropdown-item">Process and Task Automation</a></li>
+                                                <li><a href="applications_teknoloji_7_eng.html" class="dropdown-item">AI Infrastructure</a></li>
+                                                <li><a href="applications_teknoloji_8_eng.html" class="dropdown-item">AI Education</a></li>
+                                                <li><a href="applications_teknoloji_9_eng.html" class="dropdown-item">Decision Support Systems</a></li>
+                                                <li><a href="applications_teknoloji_10_eng.html" class="dropdown-item">Generative Media</a></li>
+                                                <li><a href="applications_teknoloji_11_eng.html" class="dropdown-item">Intelligent Systems (Tool)</a></li>
+                                                <li><a href="applications_teknoloji_12_eng.html" class="dropdown-item">Secure Data Management</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown-footer">
+                                        <a href="applications_eng.html#applications" class="dropdown-btn-full">
+                                            Browse All Applications
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav__item"><a href="index_eng.html#about" class="nav__link">About Us</a></li>
+                        <li class="nav__item"><a href="index_eng.html#labs" class="nav__link">Intelligence Labs</a></li>
+                        <li class="nav__item"><a href="index_eng.html#research" class="nav__link">Research</a></li>
+                        <li class="nav__item"><a href="index_eng.html#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="nav__overlay"></div>
+        </div>
+    </header>
+
+    <main class="legal-page">
+        <div class="legal-container">
+            <aside class="legal-nav">
+                <div class="legal-nav__actions">
+                    <a href="applications_eng.html" class="legal-nav__action-btn" title="Return to all applications">
+                        <i class='bx bx-arrow-back'></i>
+                        <span>Applications</span>
+                    </a>
+                    <a href="index_eng.html" class="legal-nav__action-btn" title="Return to home page">
+                        <i class='bx bx-home-alt'></i>
+                        <span>Home Page</span>
+                    </a>
+                </div>
+                <h3>Cybersecurity and Risk Management</h3>
+                <ul id="legal-toc">
+                </ul>
+            </aside>
+
+            <article class="legal-content">
+                <h1>Cybersecurity and Risk Management</h1>
+                <p class="last-updated">From Reactive Defense to Proactive Protection: AI Powered Cyber Resilience.</p>
+
+                <div class="content-body">
+
+                    <section id="giris">
+                        <h2>See the Unseen, Predict the Not Yet: The Future of Cybersecurity</h2>
+                        <p>
+                            As the value of digital assets increases, cyber threats become more sophisticated and stealthy. Traditional rule based security systems such as antivirus and firewalls create a line of defense against known threats, yet they often fall short in the face of zero day attacks, advanced persistent threats and insider threats. Instead of chasing attacks reactively, it is possible to predict threats before they occur. BRIQ Mind uses artificial intelligence and machine learning to transform your cyber defense into an intelligent, predictive and autonomous structure.
+                        </p>
+                    </section>
+
+                    <section id="cozum-detaylari">
+                        <h2>BRIQ Mind Solution: Your Self Learning Digital Security Analyst</h2>
+                        <p>
+                        Our platform analyzes billions of data points in real time from your network traffic, server logs and user behavior. The system learns your normal operational pattern and builds a behavioral baseline. It instantly detects even the slightest deviation from this baseline. Our goal is to eliminate the noise of false positives, ensure your security team focuses only on real and priority threats, and reduce response time to seconds.
+                        </p>
+
+                        <div class="app-image-container">
+                            <img src="public/uygulama_alanlari/applications_fonksiyonel_9.webp" alt="Interface showing cybersecurity anomaly detection and threat map" class="app-image">
+                        </div>
+
+                        <h3>Our Core Capabilities</h3>
+                        <ul>
+                            <li><strong>AI Powered Anomaly Detection:</strong> Detects out of standard activities before they turn into an attack, such as a user accessing a server at an unusual hour or a system unexpectedly sending data abroad.</li>
+                            <li><strong>Proactive Threat Hunting:</strong> Instead of waiting for alerts, our AI models actively search for potential threats that may be hiding in your systems, the digital traces of malware and suspicious behavior patterns.</li>
+                            <li><strong>Automated Incident Response (SOAR):</strong> When a threat is detected, it automatically performs the first response steps according to predefined scenarios, for example locking a suspicious account or blocking a malicious IP, saving valuable minutes.</li>
+                            <li><strong>Predictive Risk Modeling:</strong> By analyzing vulnerabilities in your systems, global threat intelligence and the criticality of your assets, it predicts the most likely target and method of the next attack, helping you set defense priorities.</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="stratejik-avantajlar">
+                        <h2>Strategic Advantages for Your Business</h2>
+                        <p>
+                            Smart cybersecurity is not just a technology. It is a strategic shield that secures business continuity and brand reputation.
+                        </p>
+                        <ul>
+                            <li><strong>Revolution in Response Time (MTTD/MTTR):</strong> Reduce threat detection and response times from hours or days to minutes and minimize potential damage.</li>
+                            <li><strong>Resilience Against Zero Day Attacks:</strong> Detect next generation attacks whose signatures are not yet known through behavioral analysis and close the blind spots of traditional security systems.</li>
+                            <li><strong>Security Analyst Efficiency:</strong> Free your security team from triaging thousands of meaningless alerts and enable them to focus their expertise on the most complex and critical threats.</li>
+                            <li><strong>Holistic Risk Visibility and Compliance:</strong> Monitor the security posture across your entire digital infrastructure from a single panel in a data driven and understandable way. Facilitate compliance processes with regulations such as GDPR and KVKK.</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="baslangic">
+                        <h2>Ready to Get Ahead in Cyber Defense?</h2>
+                        <p>
+                            Tired of always being one step behind attackers? Request a risk assessment today to see how BRIQ Mind's proactive cybersecurity platform can make your digital fortress smarter, faster and more resilient.
+                        </p>
+                        <a href="/index_eng.html#contact" class="cta-button">Contact us</a>
+                    </section>
+
+                </div>
+            </article>
+        </div>
+    </main>
+
+        <footer class="footer">
+            <div class="footer-content container">
+                <div class="footer-column">
+                    <h3 class="footer-brand">BRIQ Mind</h3>
+                    <p class="footer-text">
+                        We are opening the doors to transformation with artificial intelligence. We are shaping the future today.
+                    </p>
+
+            <div class="lang-switcher">
+                <button class="lang-switcher__button" type="button" aria-label="Change language" aria-haspopup="true" aria-expanded="false">
+                    <svg class="lang-switcher__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 341"><rect width="512" height="341" fill="#012169"/><path fill="#FFF" d="M0 0l512 341M512 0L0 341"/><path fill="#FFF" d="M213 0h86v341h-86z"/><path fill="#FFF" d="M0 114h512v113H0z"/><path fill="#C8102E" d="M0 137h512v68H0z"/><path fill="#C8102E" d="M230 0h52v341h-52z"/><path stroke="#FFF" stroke-width="64" d="M0 0l512 341M512 0L0 341"/><path stroke="#C8102E" stroke-width="43" d="M0 0l512 341M512 0L0 341"/></svg>
+                    <span>EN</span>
+                    <i class='bx bx-chevron-down lang-switcher__arrow'></i>
+                </button>
+                <ul class="lang-switcher__dropdown" role="menu">
+                    <li>
+                        <a class="lang-switcher__item" role="menuitem">
+                            <svg class="lang-switcher__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 341"><rect width="512" height="341" fill="#E30A17"/><circle cx="258" cy="170.5" r="102" fill="#fff"/><circle cx="275" cy="170.5" r="85" fill="#E30A17"/><path fill="#fff" d="m320 161-28 18 11-29-28-18h34l11-29 11 29h34l-28 18 11 29z"/></svg>
+                            <span>TR</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>  
+
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="applications_eng.html#applications">Applications</a></li>
+                        <li><a href="index_eng.html#about">About Us</a></li>
+                        <li><a href="index_eng.html#labs">Intelligence Labs</a></li>
+                        <li><a href="index_eng.html#research">Research</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">Corporate</h3>
+                    <ul class="footer-links">
+                        <li><a href="index_eng.html#contact">Contact</a></li>
+                        <li><a href="privacy_eng.html">Privacy Policy</a></li>
+                        <li><a href="terms_eng.html">Terms of Use</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-heading">Follow Us</h3>
+                    <div class="footer-socials">
+                        <a href="https://www.linkedin.com/company/briqmind" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.59-11.018-3.714v-2.155z"/></svg>
+                        </a>
+                        <a href="https://www.x.com/briqmind" aria-label="X (Twitter)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/briqmind.ai" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.644-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.059 1.689.073 4.948.073s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>BRIQ Mind © 2025 - <a id="manageCookiesLink">Manage Cookies</a></p>
+            </div>
+        </footer>
+
+        <div id="cookieModalOverlay" class="cookie-modal-overlay"></div>
+        <div id="cookieModal" class="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookieModalTitle" tabindex="-1">
+            <div class="cookie-modal-content">
+                <h2 id="cookieModalTitle">Cookie Preferences</h2>
+                <p>Using websites and applications involves storing and retrieving information from your device, which may be shared with third parties for various activities, including through cookies and other identifiers. Below, we provide a simple tool that allows you to customize your preferences as you see fit. You can change your consent at any time. <a href="cookies_eng.html">Learn more</a></p>
+
+                <div class="cookie-category">
+                    <div class="cookie-header">
+                        <input type="checkbox" id="necessaryCookies" checked disabled>
+                        <label for="necessaryCookies"><strong>Strictly Necessary Cookies</strong> (always active)</label>
+                    </div>
+                    <p class="cookie-description">These cookies are necessary for the site's functionality and cannot be disabled. They assist with security, user authentication, customer support, etc.</p>
+                </div>
+
+                <div class="cookie-category">
+                    <div class="cookie-header">
+                        <input type="checkbox" id="analyticsCookies" checked>
+                        <label for="analyticsCookies"><strong>Analytics Cookies</strong></label>
+                    </div>
+                    <p class="cookie-description">These cookies help us understand how visitors interact with our site. They allow us to measure traffic and improve site performance.</p>
+                </div>
+
+                <div class="cookie-category">
+                    <div class="cookie-header">
+                        <input type="checkbox" id="marketingCookies" checked>
+                        <label for="marketingCookies"><strong>Marketing Performance Cookies</strong></label>
+                    </div>
+                    <p class="cookie-description">These cookies help us measure the effectiveness of your marketing campaigns.</p>
+                </div>
+                
+                <button id="cookieDoneBtn">Save</button>
+            </div>
+        </div>
+
+    <script src="legal.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
